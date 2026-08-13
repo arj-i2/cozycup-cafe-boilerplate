@@ -11,7 +11,8 @@
   --brick-deep:   #732F28;
   --butter:       #E8C168;
   --rose:         #CE9A87;
-  --light-yellow: #F8EBCF;
+--blulink: #045e9b;
+--light-yellow: #F8EBCF;
 
   --display: "Fraunces", Georgia, serif;
   --hand: "Caveat", cursive;
@@ -165,13 +166,13 @@ nav a:hover {
 .menu {
   padding: var(--section-x);
   text-align: center;
-  scroll-margin-top: -120px;
+  scroll-margin-top: -160px;
 }
 
 .menu h2 {
   font-family: var(--display);
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: var(--ink);
 }
 
@@ -182,12 +183,12 @@ nav a:hover {
 }
 
 .menu-card {
-  background: var(--sage-mist);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 25px;
-  border: 3px dashed var(--ink-soft);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--cream-deep);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    height: auto;
 }
 
 .menu-card:hover {
@@ -196,19 +197,26 @@ nav a:hover {
 }
 
 .menu-card h3 {
-  font-family: var(--display);
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: var(--sage-deep);
-  border-bottom: 1px solid var(--cream-deep);
-  padding-bottom: 10px;
+    font-family: var(--display);
+    font-size: 28px;
+    margin: 10px 0 0;
+    padding: 0;
+    color: var(--ink-soft);
 }
 
 .menu-card li {
   font-size: 16px;
   margin: 8px 0;  
-  color: var(--ink-soft);
+  color: var(--rose);
 }
+
+.menu-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 .menu-category {
     display: flex;
     align-items: center;
@@ -226,6 +234,57 @@ nav a:hover {
   float: right;
   color: var(--brick); 
   font-weight: 600;
+}
+
+.category-card {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: var(--paper);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s ease;
+
+    z-index: 10;
+}
+
+.category-card:hover .category-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.category-dropdown div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid var(--cream-deep);
+}
+
+.category-dropdown div:last-child {
+    border-bottom: none;
+}
+
+.category-dropdown span {
+    color: var(--brick);
+    font-weight: 600;
 }
 
 
@@ -270,8 +329,29 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
 
-/* Footer */
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blulink);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links i {
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: var(--butter);
+}
+
 footer {
   background: var(--ink);
   color: var(--paper);
