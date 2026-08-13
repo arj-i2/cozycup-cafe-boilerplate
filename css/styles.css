@@ -11,6 +11,7 @@
   --brick-deep:   #732F28;
   --butter:       #E8C168;
   --rose:         #CE9A87;
+  --light-yellow: #F8EBCF;
 
   --display: "Fraunces", Georgia, serif;
   --hand: "Caveat", cursive;
@@ -80,9 +81,10 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 180px 0 200px;
-  min-height: 60vh;
-  background: url("../assets/bg.png") center/cover no-repeat;
-  color: var(--paper);
+  min-height: 80vh;
+  background: url("../img/c2.png") center top / contain no-repeat;
+  background-size: 100% auto;
+  color: var(--light-yellow);
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 100px rgba(0,0,0,0.3);
@@ -96,7 +98,6 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 150px;
-  background: url("../assets/top_border.png") center top / 100% auto no-repeat;
   z-index: 2;
 }
 
@@ -108,7 +109,6 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 150px;
-  background: url("../assets/bottom_border.png") center bottom / cover no-repeat;
   z-index: 2;
 }
 
@@ -161,43 +161,6 @@ nav a:hover {
   font-size: 36px;
   margin-bottom: 20px;
 }
-
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 15px 34px;
-  background: var(--brick);
-  color: var(--cream);
-  text-decoration: none;
-  border: none;
-  border-radius: 999px;
-  font-family: var(--body);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  box-shadow: 0 6px 0 var(--brick-deep);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 0 var(--brick-deep);
-}
-.cta-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 3px 0 var(--brick-deep);
-}
-.cta-button--light {
-  background: var(--butter);
-  color: var(--ink);
-  box-shadow: 0 6px 0 #b8933f;
-  width: 100%;
-  justify-content: center;
-}
-.cta-button--light:hover { box-shadow: 0 8px 0 #b8933f; }
-
 
 .menu {
   padding: var(--section-x);
@@ -267,9 +230,11 @@ nav a:hover {
 
 
 .about {
-  padding: var(--section-x);
   text-align: center;
-  background: var(--sage-mist);
+  padding: 180px 0 200px;
+  min-height:40vh;
+  background: url("../img/5.png") center center / cover no-repeat;
+  background-size: 100% auto;
 }
 
 .about h2 {
